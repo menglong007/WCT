@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.mdc-notched-outline__notch {
+  border-right: none !important;
+}
+.mat-mdc-dialog-surface{
+  border-radius: 20px !important;
+}
+.mat-mdc-card {
+  border-radius: 20px !important;
+}
+.ng-star-inserted{
+  border-radius: 20px !important;
+}
+.carousel-item ng-star-inserted{
+  border-radius: 20px !important;
+}
+
