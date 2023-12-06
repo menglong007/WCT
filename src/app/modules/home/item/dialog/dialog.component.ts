@@ -1,7 +1,6 @@
 import {Component} from "@angular/core";
 import {NgbCarouselConfig} from "@ng-bootstrap/ng-bootstrap";
-import {ThemePalette} from "@angular/material/core";
-import {FormControl} from "@angular/forms";
+import {MatDialogRef} from "@angular/material/dialog";
 
 
 interface Food {
@@ -16,7 +15,6 @@ interface Food {
 })
 export class DialogComponent {
 
-  fontStyleControl = new FormControl('');
   fontStyle?: string;
 
   showArrows = true;
@@ -36,8 +34,6 @@ export class DialogComponent {
       "weight": "G"
     }]
   }
-
-
 
   slides = [
     {
