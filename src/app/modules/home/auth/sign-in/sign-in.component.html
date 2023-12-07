@@ -1,0 +1,30 @@
+<div class="flex flex-col p-4 gap-2 ">
+  <p class="font-bold text-2xl ">Sign in to your account</p>
+  <div class="flex flex-col">
+    <p class="font-bold">Your email or phone number</p>
+    <mat-form-field appearance="outline" >
+      <input matInput placeholder="Email or Phone Number " >
+    </mat-form-field>
+
+    <p class="font-bold">Your Password</p>
+    <mat-form-field appearance="outline" >
+      <input matInput [type]="hide ? 'password' : 'text'" type="password" placeholder="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" >
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <div>
+    <section>
+      <mat-checkbox color="primary">Remember me</mat-checkbox>
+    </section>
+  </div>
+  <div>
+    <button  class="btn btn-primary text-white w-full "
+              > Sign In </button>
+
+  </div>
+  <div >
+    <span>Don’t have an account yet? <button (click)="onClick()" class="text-blue-700">Sign Up</button></span>
+  </div>
+</div>

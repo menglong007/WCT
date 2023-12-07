@@ -1,0 +1,8 @@
+<div>
+   <ng-container *ngIf="isSignIn">
+     <app-sign-in (signInClicked)="onTap()"></app-sign-in>
+   </ng-container>
+  <ng-container *ngIf="!isSignIn">
+    <app-sign-up (signUpClicked)="onTap()"></app-sign-up>
+  </ng-container>
+</div>

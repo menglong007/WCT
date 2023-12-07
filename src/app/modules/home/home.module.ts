@@ -1,6 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {SlickCarouselModule} from "ngx-slick-carousel";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatButtonModule} from "@angular/material/button";
@@ -19,8 +17,14 @@ import {HomeComponent} from "./home.component";
 import {ItemComponent} from "./item/item.component";
 import {DialogComponent} from "./item/dialog/dialog.component";
 import {CarouselComponent} from "./carousel/carousel.component";
-import {FormComponent} from "./myaccountform/form.component";
 import {ContactComponent} from "./contact/contact.component";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {RouterModule} from "@angular/router";
+import {CommonModule} from "@angular/common";
+import {SignInComponent} from "./auth/sign-in/sign-in.component";
+import {SignUpComponent} from "./auth/sign-up/sign-up.component";
+import {AuthComponent} from "./auth/auth.component";
+
 
 
 @NgModule({
@@ -29,12 +33,14 @@ import {ContactComponent} from "./contact/contact.component";
     CarouselComponent,
     HomeComponent,
     DialogComponent,
-    FormComponent,
-    ContactComponent
+    ContactComponent,
+    SignInComponent,
+    SignUpComponent,
+    AuthComponent
+
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
+    CommonModule,
     SlickCarouselModule,
     MatSidenavModule,
     MatButtonModule,
@@ -49,7 +55,14 @@ import {ContactComponent} from "./contact/contact.component";
     MatButtonToggleModule,
     MatChipsModule,
     MatIconModule,
-    MatRadioModule
+    MatRadioModule,
+    MatCheckboxModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: HomeComponent,
+      }
+    ]),
   ],
   providers: [],
   exports: [

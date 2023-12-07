@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {RouterOutlet} from "@angular/router";
-import {HomeModule} from "./modules/home/home.module";
+import {AppRoutingModule} from "./app-routing.module";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
+    CommonModule,
     BrowserAnimationsModule,
-    HomeModule,
-    RouterOutlet,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -72,7 +72,7 @@ export class ItemComponent {
 
   openDialog() {
     const dialogRef = this.dialog.open(DialogComponent, {
-      height: '707px',
+      minHeight: '700px',
       width: '1000px'
     });
 

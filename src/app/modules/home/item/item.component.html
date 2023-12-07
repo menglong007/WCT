@@ -4,7 +4,7 @@
       <p class="text-2xl  pl-5 font-bold animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 ">{{ item.name }}</p>
     </div>
     <div class="pt-2 grid grid-cols-4 gap-4  ">
-      <mat-card *ngFor="let allItem of item.items" class=" transform transition duration-175 hover:scale-105 shadow-black shadow-lg"  >
+      <mat-card *ngFor="let allItem of item.items" class=" transform transition duration-175 hover:scale-105 shadow-black shadow"  >
         <mat-card-header class="p-0 flex flex-row  justify-between  w-full">
             <div class="flex items-center">
               <button mat-icon-button>
@@ -19,16 +19,16 @@
             </div>
         </mat-card-header>
 
-        <img mat-card-image [src]="allItem.image" class="w-full  transform transition duration-100 hover:scale-90 rounded-2xl  h-auto" alt="phone">
+        <img mat-card-image [src]="allItem.image" class="w-full  transform transition duration-100 hover:scale-90 rounded-lg  h-auto" alt="phone">
         <mat-card-content >
           <div class=" flex p-2 flex-col space-y-2">
             <p class="font-bold ">{{ allItem.model }}</p>
             <span class="" >
               <s>{{allItem.price_off}}</s>
-              <span>{{allItem.price}}</span>
+               <span>{{allItem.price}}</span>
             </span>
             <div class="flex justify-center">
-              <button  class="focus:ring-4 hover:bg-blue-900 shadow-lg transform active:scale-75 transition-transform rounded-2xl cursor-pointer bg-blue-700 text-white w-28 h-10"
+              <button  class="btn btn-primary text-white"
                        (click)="openDialog()"> Buy now</button>
             </div>
           </div>
@@ -37,3 +37,4 @@
     </div>
   </div>
 </div>
+
