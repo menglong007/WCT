@@ -1,7 +1,7 @@
 <div  class="flex flex-col h-full w-full  gap-2">
   <div *ngFor="let item of product">
     <div class="w-auto border-4 bg-white border-white rounded-2xl pt-2 ">
-      <p class="text-2xl  pl-5 font-bold animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 ">{{ item.name }}</p>
+      <p class="text-2xl pl-5 font-bold animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 ">{{ item.name }}</p>
     </div>
     <div class="pt-2 grid grid-cols-4 gap-4  ">
       <mat-card *ngFor="let allItem of item.items" class=" transform transition duration-175 hover:scale-105 shadow-black shadow"  >

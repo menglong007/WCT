@@ -1,0 +1,35 @@
+<div >
+  <p class=" text-4xl pl-5 font-bold animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 ">My Favorite</p>
+</div>
+<div class="pt-2 grid grid-cols-4 gap-4  ">
+  <mat-card *ngFor="let allItem of items" class=" transform transition duration-175 hover:scale-105 shadow-black shadow"  >
+    <mat-card-header class="p-0 flex flex-row  justify-between  w-full">
+      <div class="flex items-center">
+        <button mat-icon-button>
+          <mat-icon>share</mat-icon>
+        </button>
+      </div>
+      <div class="flex items-center">
+        <button mat-icon-button (click)="toggleSelected()">
+          <mat-icon *ngIf="selected" aria-label="Example icon-button with a heart icon" color="warn">favorite</mat-icon>
+          <mat-icon *ngIf="!selected" aria-label="Example icon-button with a heart icon">favorite_border</mat-icon>
+        </button>
+      </div>
+    </mat-card-header>
+
+    <img mat-card-image [src]="allItem.image" class="w-full  transform transition duration-100 hover:scale-90 rounded-lg  h-auto" alt="phone">
+    <mat-card-content >
+      <div class=" flex p-2 flex-col space-y-2">
+        <p class="font-bold ">{{ allItem.model }}</p>
+        <span class="" >
+              <s>{{allItem.price_off}}</s>
+               <span>{{allItem.price}}</span>
+            </span>
+        <div class="flex justify-center">
+          <button  class="btn btn-primary text-white"
+                   (click)="openDialog()"> Buy now</button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

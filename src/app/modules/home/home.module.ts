@@ -24,8 +24,7 @@ import {CommonModule} from "@angular/common";
 import {SignInComponent} from "./auth/sign-in/sign-in.component";
 import {SignUpComponent} from "./auth/sign-up/sign-up.component";
 import {AuthComponent} from "./auth/auth.component";
-
-
+import {FavComponent} from "./favorite/fav.component";
 
 @NgModule({
   declarations: [
@@ -36,7 +35,8 @@ import {AuthComponent} from "./auth/auth.component";
     ContactComponent,
     SignInComponent,
     SignUpComponent,
-    AuthComponent
+    AuthComponent,
+    FavComponent
 
   ],
   imports: [
@@ -61,12 +61,23 @@ import {AuthComponent} from "./auth/auth.component";
       {
         path: '',
         component: HomeComponent,
-      }
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
+      },
+      {
+        path: 'favorite',
+        component: FavComponent,
+      },
+
+
     ]),
   ],
   providers: [],
   exports: [
-    HomeComponent
+    HomeComponent,
+    CarouselComponent
   ]
 })
 export class HomeModule { }
