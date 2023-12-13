@@ -25,6 +25,7 @@ import {SignInComponent} from "./auth/sign-in/sign-in.component";
 import {SignUpComponent} from "./auth/sign-up/sign-up.component";
 import {AuthComponent} from "./auth/auth.component";
 import {FavComponent} from "./favorite/fav.component";
+import {FooterComponent} from "./footer/footer.component";
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {FavComponent} from "./favorite/fav.component";
     SignInComponent,
     SignUpComponent,
     AuthComponent,
-    FavComponent
+    FavComponent,
+    FooterComponent
 
   ],
   imports: [

@@ -7,15 +7,9 @@ import {AuthComponent} from "./auth/auth.component";
 })
 export class HomeComponent  implements OnInit{
 
-  constructor(public dialog: MatDialog) {
-  }
 
-  openDialog() {
-    const dialogRef = this.dialog.open( AuthComponent, {
-      minHeight: '450px',
-      width: '500px'
-    });
-  }
+
+
 
   listFav: any[] = [
     {

@@ -21,7 +21,126 @@ export class FavComponent{
     "model": "IPX",
     "price_off" : "1500$",
     "price" : "1400$"
-  }];
+  },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    },
+    {
+      "id": "1",
+      "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+      "model": "IPX",
+      "price_off" : "1500$",
+      "price" : "1400$"
+    }];
   constructor(private  dialog: MatDialog) {
   }
 

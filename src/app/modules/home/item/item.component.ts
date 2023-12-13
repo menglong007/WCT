@@ -21,6 +21,7 @@ export class ItemComponent {
   constructor(public dialog: MatDialog) {
     this.product = [{
       "name": "iphone",
+      "description" : "apple",
       "items": [{
         "image": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
         "model": "IPX",
