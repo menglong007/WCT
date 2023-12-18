@@ -20,5 +20,5 @@ export class AppComponent {
   }
 
 
-
+  protected readonly onchange = onchange;
 }

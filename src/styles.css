@@ -17,7 +17,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   border-radius: 10px !important;
 }
 .ng-star-inserted{
-  border-radius: 20px !important;
+  /*border-radius: 20px !important;*/
 }
 .carousel-item ng-star-inserted{
   border-radius: 20px !important;

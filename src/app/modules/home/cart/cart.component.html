@@ -1,0 +1,68 @@
+<div class="w-full h-full items-center flex justify-center bg-white">
+  <div class="space-y-2 w-75 h-full ">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="photo">
+        <th mat-header-cell *matHeaderCellDef class="w-40"></th>
+        <td mat-cell *matCellDef="let element">
+          <img class="w-28" [src]="element.photo">
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Product">
+        <th mat-header-cell *matHeaderCellDef> PRODUCT</th>
+        <td mat-cell *matCellDef="let element" class="font-bold"> {{element.Product}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef class="text-center"> QUANTITY</th>
+        <td mat-cell *matCellDef="let element">
+          <div class="flex-row flex items-center w-full justify-center">
+            <button mat-icon-button (click)="decrement()">
+              <mat-icon class="text-black">arrow_back_ios</mat-icon>
+            </button>
+            <input [(ngModel)]="numberValue" class="text-black bg-white w-5" (change)="onChange($event)">
+            <button mat-icon-button (click)="increment()">
+              <mat-icon class="text-black">arrow_forward_ios</mat-icon>
+            </button>
+          </div>
+        </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> PRICE</th>
+        <td mat-cell *matCellDef="let element"> {{element.price | currency}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef> TOTAL</th>
+        <td mat-cell *matCellDef="let element"> {{element.price | currency}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef >
+          <div class="h-full flex justify-center items-center">
+            <button class="btn btn-error " (click)="clearTable()">CLEAR CART</button>
+
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <div  class="flex justify-center">
+            <button class="btn btn-error">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns ; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+</div>
+
+
+

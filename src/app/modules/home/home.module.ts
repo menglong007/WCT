@@ -6,7 +6,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CarouselModule} from "@syncfusion/ej2-angular-navigations";
 import {NgbCarouselModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
@@ -26,6 +26,11 @@ import {SignUpComponent} from "./auth/sign-up/sign-up.component";
 import {AuthComponent} from "./auth/auth.component";
 import {FavComponent} from "./favorite/fav.component";
 import {FooterComponent} from "./footer/footer.component";
+import {MatListModule} from "@angular/material/list";
+import {NavComponent} from "./sidenav/nav.component";
+import {CartComponent} from "./cart/cart.component";
+import {MatTableModule} from "@angular/material/table";
+import {MatSliderModule} from "@angular/material/slider";
 
 @NgModule({
   declarations: [
@@ -38,7 +43,9 @@ import {FooterComponent} from "./footer/footer.component";
     SignUpComponent,
     AuthComponent,
     FavComponent,
-    FooterComponent
+    FooterComponent,
+    NavComponent,
+    CartComponent
 
   ],
   imports: [
@@ -72,14 +79,25 @@ import {FooterComponent} from "./footer/footer.component";
         path: 'favorite',
         component: FavComponent,
       },
+      {
+        path: 'cart',
+        component: CartComponent,
+      },
+
 
 
     ]),
+    MatListModule,
+    ReactiveFormsModule,
+    MatTableModule,
+    MatSliderModule,
+
   ],
   providers: [],
   exports: [
     HomeComponent,
-    CarouselComponent
+    CarouselComponent,
+    NavComponent
   ]
 })
 export class HomeModule { }
