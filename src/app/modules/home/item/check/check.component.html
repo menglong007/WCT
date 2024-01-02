@@ -1,0 +1,61 @@
+<div class="flex justify-between p-4 gap-6">
+  <div class="w-full">
+    <form class=" space-y-3 flex flex-col">
+      <h1>Contact</h1>
+      <mat-form-field appearance="outline">
+        <mat-label>Email or mobile phone number</mat-label>
+        <input matInput placeholder="Email or mobile phone number">
+      </mat-form-field>
+
+      <h1>Delivery</h1>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Full name</mat-label>
+        <input matInput placeholder="full name">
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline">
+        <mat-label>Province</mat-label>
+        <mat-select [(ngModel)]="selected" name="province">
+          <mat-option>None</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Address</mat-label>
+        <input matInput placeholder="Address">
+      </mat-form-field>
+
+      <section class="example-section">
+        <mat-checkbox color="primary">Save this information for next time</mat-checkbox>
+      </section>
+      <h1>Payment</h1>
+      <div class="flex gap-2">
+        <img class="w-10 h-10 rounded-lg" src="https://yt3.googleusercontent.com/ytc/AIf8zZTpPnhIN7klLt4ydhm-i1KOxYzr7yMpBCd9nSp1UQ=s900-c-k-c0x00ffffff-no-rj">
+        <img class="w-10 h-10 rounded-lg" src="https://www.acledabank.com.kh/kh/assets/download_material/download-logo-blue.jpg">
+        <img class="w-10 h-10 rounded-lg" src="https://www.wingbank.com.kh/wp-content/uploads/2023/11/Wing-Bank-WIngmall-Logo-01-scaled.jpg">
+        <img class="w-10 h-10 rounded-lg border-2 border-red-500" src="https://hrincjobs-pro.s3.amazonaws.com/media/public/filer_public/09/da/09dab2cb-a656-4151-8892-11793a2f4ddc/logo-app1.png">
+      </div>
+    </form>
+  </div>
+
+  <div class="w-full flex flex-col space-y-3">
+    <div class="border border-gray-300 flex flex-row gap-4 p-2 rounded-lg ">
+      <img class="w-20" src="https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg" alt="">
+      <p>hello</p>
+    </div>
+    <div class="flex flex-col items-end justify-end space-y-3 h-full ">
+      <div class="flex-row w-full flex justify-between border-gray-300 border p-2 rounded-lg ">
+        <p>Total: </p>
+        <p>1000$</p>
+      </div>
+      <div class="flex gap-2">
+        <button mat-dialog-close class="btn btn-error text-white">Cancel</button>
+        <button  class="btn btn-primary text-white">Buy</button>
+      </div>
+    </div>
+  </div>
+</div>

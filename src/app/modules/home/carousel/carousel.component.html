@@ -1,8 +1,8 @@
-<ngb-carousel  [showNavigationArrows]="showArrows" [showNavigationIndicators]="showIndicators">
+<div >
+  <ngb-carousel [showNavigationArrows]="showArrows" [showNavigationIndicators]="showIndicators">
     <ng-template ngbSlide *ngFor="let slide of slides" >
-      <img [src]="slide.imageUrl" alt="{{ slide.caption }}">
-      <div class="carousel-caption">
-        <h3>{{ slide.caption }}</h3>
-      </div>
+      <img [src]="slide.imageUrl"  alt="photo" class="w-full ">
     </ng-template>
-</ngb-carousel>
+  </ngb-carousel>
+</div>
+

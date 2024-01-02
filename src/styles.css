@@ -22,4 +22,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .carousel-item ng-star-inserted{
   border-radius: 20px !important;
 }
+.mat-mdc-menu-panel{
+  border-radius: 20px !important;
+}
+
 

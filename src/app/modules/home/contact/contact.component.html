@@ -1,8 +1,8 @@
 <div class="h-full flex items-center justify-center bg-gray-100 overflow-y-hidden">
   <div class="items-center flex flex-col space-y-10 bg-white w-full p-4">
-    <div class="flex flex-col  items-center ">
+    <div class="flex flex-col items-center ">
       <p class="text-gray-500">You can ask us questions!</p>
-      <p class="text-7xl text-gray-700">Ask all your questions</p>
+      <p class="text-7xl max-sm:text-2xl text-gray-700">Ask all your questions</p>
     </div>
     <div class="flex flex-col space-y-4 w-72">
       <button class="btn btn-success text-white sm:hidden"><mat-icon>call</mat-icon>0123456789</button>
@@ -20,11 +20,30 @@
       </button>
       <button class="btn btn-outline btn-info "><mat-icon>location_on</mat-icon>Location</button>
     </div>
-    <div class="flex flex-row justify-content-between  w-75">
+    <div class="flex flex-row justify-content-between  w-75 max-sm:hidden">
       <div class="text-gray-500 ">
-        <p class="text-center  font-bold">CONTACT US</p>
-        <p class=" font-light  flex items-center"><mat-icon>call</mat-icon>Mobile: 0123456789</p>
-        <p class=" font-light   flex items-center"><mat-icon>mail</mat-icon>Mail: contact@apleestore.com</p>
+        <p class="text-center font-bold">CONTACT US</p>
+        <p class=" font-light flex items-center"><mat-icon>call</mat-icon>Mobile: 0123456789</p>
+        <p class=" font-light flex items-center"><mat-icon>mail</mat-icon>Mail: contact@apleestore.com</p>
+      </div>
+
+      <div class="text-gray-500">
+        <p class=" font-bold text-center">ADDRESS</p>
+        <p class="text-center  font-light flex items-center "><mat-icon>location_on</mat-icon>Phnom Penh, CAMBODIA</p>
+      </div>
+
+      <div class="text-gray-500">
+        <p class=" font-bold text-center">HOUR OF OPERATION</p>
+        <p class="text-md  font-light">Monday – Friday : 09:00 – 20:00</p>
+        <p class="text-md  font-light">Sunday & Saturday: 10:30 – 22:00</p>
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-content-between w-75 sm:hidden">
+      <div class="text-gray-500 ">
+        <p class="text-center font-bold">CONTACT US</p>
+        <p class=" font-light flex items-center"><mat-icon>call</mat-icon>Mobile: 0123456789</p>
+        <p class=" font-light flex items-center"><mat-icon>mail</mat-icon>Mail: contact@apleestore.com</p>
       </div>
 
       <div class="text-gray-500">
@@ -39,7 +58,8 @@
       </div>
     </div>
   </div>
-
 </div>
+
+<app-footer></app-footer>
 
 

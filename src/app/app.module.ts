@@ -10,6 +10,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {HomeModule} from "./modules/home/home.module";
 import {MatExpansionModule} from "@angular/material/expansion";
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -26,7 +30,18 @@ import {MatExpansionModule} from "@angular/material/expansion";
         MatDialogModule,
         MatSidenavModule,
         HomeModule,
-        MatExpansionModule
+        MatExpansionModule,
+        provideFirebaseApp(() => initializeApp({
+            "projectId": "angular-wct-pro",
+            "appId": "1:466181939144:web:44e2aa2cf0e339bc6f6afd",
+            "storageBucket": "angular-wct-pro.appspot.com",
+            "apiKey": "AIzaSyAzuj3L4Dru8rfoAHYwF_IkPwghqfLCJK0",
+            "authDomain": "angular-wct-pro.firebaseapp.com",
+            "messagingSenderId": "466181939144"
+        })),
+        provideFirestore(() => getFirestore()),
+        MatButtonToggleModule,
+        MatMenuModule
     ],
   providers: [],
   bootstrap: [AppComponent]

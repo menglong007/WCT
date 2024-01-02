@@ -1,5 +1,6 @@
-import {Component} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {NgbCarouselConfig} from "@ng-bootstrap/ng-bootstrap";
+import {AngularFirestore} from "@angular/fire/compat/firestore";
 
 
 @Component({
@@ -7,18 +8,20 @@ import {NgbCarouselConfig} from "@ng-bootstrap/ng-bootstrap";
   templateUrl : 'carousel.component.html'
 })
 
-export  class  CarouselComponent {
+export  class  CarouselComponent implements OnInit{
+
+  slides: any = [];
   showArrows = true;
   showIndicators= true;
-  constructor(config: NgbCarouselConfig) {
+  constructor(config: NgbCarouselConfig,
+              private firestore: AngularFirestore) {
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
+
   }
-  slides = [
-    { imageUrl: 'https://shop.daisycomms.co.uk/wp-content/uploads/2023/09/Apple-iPhone-15-promo-banner-buy-now-scaled.jpg', caption: 'beach' },
-    { imageUrl: 'https://shop.daisycomms.co.uk/wp-content/uploads/2023/09/Apple-iPhone-15-promo-banner-buy-now-scaled.jpg', caption: 'beach' },
-    { imageUrl: 'https://shop.daisycomms.co.uk/wp-content/uploads/2023/09/Apple-iPhone-15-promo-banner-buy-now-scaled.jpg', caption: 'beach' },
-    { imageUrl: 'https://shop.daisycomms.co.uk/wp-content/uploads/2023/09/Apple-iPhone-15-promo-banner-buy-now-scaled.jpg', caption: 'beach' },
-    { imageUrl: 'https://shop.daisycomms.co.uk/wp-content/uploads/2023/09/Apple-iPhone-15-promo-banner-buy-now-scaled.jpg', caption: 'beach' },
-  ];
+
+  ngOnInit(){
+    this.slides = this.firestore.collection('carousel').valueChanges();
+  }
+
 }

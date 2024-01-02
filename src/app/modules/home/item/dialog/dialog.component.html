@@ -19,9 +19,9 @@
 
       <div class="space-y-4">
         <div *ngFor="let space of Space" class="text-xl font-medium flex-col flex space-y-4">
-          <p class="font-bold text-2xl">{{space.model}}</p>
-          <p class="font-extralight">{{space.price}}</p>
-          <p>Space :</p>
+          <p class="font-bold ">{{space.model}}</p>
+          <p class="font-extralight ">{{space.price}}</p>
+          <p >Space :</p>
           <ng-container *ngFor="let prop of ['Display', 'Camera', 'Battery', 'Chip']; let i = index">
             <span class="flex items-center font-extralight gap-3">
               <span class="ml-7"></span><mat-icon class="text-2xl w-auto h-auto icon-style">{{ icons[i] }}</mat-icon>
@@ -29,6 +29,15 @@
             </span>
           </ng-container>
         </div>
+
+        <div>
+          <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle >64G</mat-button-toggle>
+            <mat-button-toggle >128G</mat-button-toggle>
+            <mat-button-toggle >256G</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+
         <div class="flex flex-row  space-x-2">
           <div *ngFor="let color of colors;let index = index" class="">
             <button (click)="Tap(index)" [style.background-color]="color"
@@ -48,11 +57,14 @@
             </button>
           </div>
           <div class="flex flex-col space-y-4">
-            <button class="btn btn-error text-white">CHECKOUT</button>
+            <button class="btn btn-error text-white" (click)="openDialog()">CHECKOUT</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
 

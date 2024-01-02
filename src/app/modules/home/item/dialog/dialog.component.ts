@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, Output} from "@angular/core";
 import {NgbCarouselConfig} from "@ng-bootstrap/ng-bootstrap";
-import {MatDialogRef} from "@angular/material/dialog";
+import {MatDialog} from "@angular/material/dialog";
+import {CheckComponent} from "../check/check.component";
 
 
 interface Food {
@@ -36,7 +37,8 @@ export class DialogComponent {
   showIndicators= true;
 
 
-  constructor(config: NgbCarouselConfig) {
+  constructor(config: NgbCarouselConfig,
+              private dialog: MatDialog) {
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
     this.Space = [{
@@ -58,6 +60,17 @@ export class DialogComponent {
     { imageUrl: 'https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg', caption: 'beach' },
 
   ];
+
+  openDialog() {
+    const dialogRef = this.dialog.open(CheckComponent, {
+      minHeight: '700px',
+      width: '1000px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 
 
 
