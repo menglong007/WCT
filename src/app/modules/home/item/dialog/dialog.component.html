@@ -1,70 +1,67 @@
-<div class="w-full p-3 flex justify-end">
-  <button mat-dialog-close>
-    <mat-icon>close</mat-icon>
-  </button>
-</div>
-<div class="h-full flex items-center justify-center p-4  ">
-  <div class="items-center justify-center flex flex-row  bg-white w-full p-4 ">
-    <div class=" flex flex-row space-x-40">
-      <div>
-        <ngb-carousel [showNavigationArrows]="showArrows" [showNavigationIndicators]="showIndicators" class="w-80">
-          <ng-template ngbSlide *ngFor="let slide of slides">
-            <img [src]="slide.imageUrl" alt="{{ slide.caption }}">
-            <div class="carousel-caption">
-              <h3>{{ slide.caption }}</h3>
-            </div>
-          </ng-template>
-        </ngb-carousel>
-      </div>
+<div class="p-2">
+  <div class="w-full  flex justify-end">
+    <button mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div class="h-full flex items-center justify-center p-2  ">
+    <div class="items-center justify-center flex flex-row  bg-white w-full p-2 ">
+      <div class=" flex flex-row space-x-20">
 
-      <div class="space-y-4">
-        <div *ngFor="let space of Space" class="text-xl font-medium flex-col flex space-y-4">
-          <p class="font-bold ">{{space.model}}</p>
-          <p class="font-extralight ">{{space.price}}</p>
-          <p >Space :</p>
-          <ng-container *ngFor="let prop of ['Display', 'Camera', 'Battery', 'Chip']; let i = index">
-            <span class="flex items-center font-extralight gap-3">
-              <span class="ml-7"></span><mat-icon class="text-2xl w-auto h-auto icon-style">{{ icons[i] }}</mat-icon>
-<!--              {{ prop }} : {{ space[prop.toLowerCase()] }}-->
+          <div class="flex items-center justify-center">
+            <img [src]="Space.imD" class="w-80">
+          </div>
+
+
+        <div class="space-y-4">
+          <div class="text-xl font-medium flex-col flex space-y-4">
+            <p class="font-bold ">{{ Space.model }}</p>
+            <p class="font-extralight ">{{ Space.price | currency }}</p>
+            <p>Space :</p>
+            <ng-container *ngFor="let prop of ['Display', 'Camera', 'Battery', 'Chip']; let i = index">
+            <span class="flex items-center text-lg font-medium gap-3">
+              <span class="ml-7 "></span><mat-icon class="text-2xl  w-auto h-auto icon-style">{{ icons[i] }}</mat-icon>
+                : {{ Space[prop.toLowerCase()] }}
             </span>
-          </ng-container>
-        </div>
-
-        <div>
-          <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-            <mat-button-toggle >64G</mat-button-toggle>
-            <mat-button-toggle >128G</mat-button-toggle>
-            <mat-button-toggle >256G</mat-button-toggle>
-          </mat-button-toggle-group>
-        </div>
-
-        <div class="flex flex-row  space-x-2">
-          <div *ngFor="let color of colors;let index = index" class="">
-            <button (click)="Tap(index)" [style.background-color]="color"
-                    class="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer transform active:scale-75 duration-200 transition-transform ">
-              <mat-icon *ngIf="Selected == index" class=" text-white">radio_button_checked</mat-icon>
-            </button>
+            </ng-container>
           </div>
-        </div>
+          <form [formGroup]="form" class="space-x-3">
+            <mat-form-field class="w-40" appearance="outline">
+              <mat-label>Storage</mat-label>
+              <mat-select formControlName="memory">
+                <mat-option *ngFor="let memory of Space.memory; let index = index" [value]="index">
+                  {{ memory }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
 
-        <div class="flex flex-col space-y-6">
-          <div class="flex flex-row items-center gap-7">
-            <button class="btn btn-neutral text-white">ADD TO CART</button>
-            <button mat-icon-button (click)="toggleSelected()">
-              <mat-icon *ngIf="selected" aria-label="Example icon-button with a heart icon" color="warn">favorite
-              </mat-icon>
-              <mat-icon *ngIf="!selected" aria-label="Example icon-button with a heart icon">favorite_border</mat-icon>
-            </button>
-          </div>
-          <div class="flex flex-col space-y-4">
-            <button class="btn btn-error text-white" (click)="openDialog()">CHECKOUT</button>
+            <mat-form-field class="w-40" appearance="outline">
+              <mat-label>Color</mat-label>
+              <mat-select formControlName="color">
+                <mat-option  *ngFor="let color of Space.colors; let index = index" [value]="index">
+                  {{ color }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </form>
+
+          <div class="flex flex-col space-y-6">
+            <div class="flex flex-row items-center gap-7">
+              <button class="btn btn-neutral text-white" (click)="onAddToCart(Space.id)" >ADD TO CART</button>
+              <button mat-icon-button (click)="toggleSelected()">
+                <mat-icon *ngIf="selected" aria-label="Example icon-button with a heart icon" color="warn">favorite
+                </mat-icon>
+                <mat-icon *ngIf="!selected" aria-label="Example icon-button with a heart icon">favorite_border</mat-icon>
+              </button>
+            </div>
+            <div class="flex flex-col space-y-4">
+              <button class="btn btn-error text-white" (click)="onSubmit()">CHECKOUT</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
 

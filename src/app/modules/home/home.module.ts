@@ -28,13 +28,10 @@ import {FavComponent} from "./favorite/fav.component";
 import {FooterComponent} from "./footer/footer.component";
 import {MatListModule} from "@angular/material/list";
 import {NavComponent} from "./sidenav/nav.component";
-import {CartComponent} from "./cart/cart.component";
 import {MatTableModule} from "@angular/material/table";
 import {MatSliderModule} from "@angular/material/slider";
-import {AngularFireModule} from "@angular/fire/compat";
-import {environment} from "../../../environments/environment";
-import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
 import {CheckComponent} from "./item/check/check.component";
+import {CheckCartComponent} from "./sidenav/checkCart/check.component";
 
 @NgModule({
   declarations: [
@@ -49,8 +46,8 @@ import {CheckComponent} from "./item/check/check.component";
     FavComponent,
     FooterComponent,
     NavComponent,
-    CartComponent,
-    CheckComponent
+    CheckComponent,
+    CheckCartComponent
 
   ],
   imports: [
@@ -71,8 +68,6 @@ import {CheckComponent} from "./item/check/check.component";
     MatIconModule,
     MatRadioModule,
     MatCheckboxModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
     RouterModule.forChild([
       {
         path: '',
@@ -86,10 +81,7 @@ import {CheckComponent} from "./item/check/check.component";
         path: 'favorite',
         component: FavComponent,
       },
-      {
-        path: 'cart',
-        component: CartComponent,
-      },
+
 
 
 

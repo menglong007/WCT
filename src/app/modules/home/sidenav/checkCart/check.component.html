@@ -42,26 +42,26 @@
   </div>
 
   <div class="  h-full overflow-auto w-full flex flex-col space-y-3">
-    <div *ngFor="let image of Images" class="flex flex-col space-y-10 ">
-      <div  class="border border-gray-300 flex flex-row gap-4 p-2 rounded-lg">
+    <div *ngFor="let image of Images" class="flex flex-col space-y-10">
+      <div *ngFor="let image of Images" class="border border-gray-300 flex flex-row gap-4 p-2 rounded-lg">
         <img class="w-20" [src]="image.image" alt="">
         <div class="flex flex-col">
           <p class="font-bold">{{ image.model }} </p>
         </div>
       </div>
-
-
-    </div>
-    <div class="flex flex-col items-end justify-end space-y-3 h-full ">
-      <div class="flex-row w-full flex justify-between border-gray-300 border p-2 rounded-lg ">
-        <p>Total: </p>
-        <p></p>
+      <div class="flex flex-col items-end justify-end space-y-3 h-full ">
+        <div class="flex-row w-full flex justify-between border-gray-300 border p-2 rounded-lg ">
+          <p>Total: </p>
+          <p></p>
+        </div>
+        <div class=" right-0 bottom-0  gap-2  h-full ">
+          <button mat-dialog-close class="btn btn-error text-white">Cancel</button>
+          <button class="btn btn-primary text-white" (click)="onSubmit()">Buy</button>
+        </div>
       </div>
+
     </div>
-    <div class="flex justify-end items-end gap-2  h-full ">
-      <button mat-dialog-close class="btn btn-error text-white">Cancel</button>
-      <button class="btn btn-primary text-white" (click)="onSubmit()">Buy</button>
-    </div>
+
 
   </div>
 
