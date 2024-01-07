@@ -101,7 +101,7 @@ export class DialogComponent {
   private _onInsert() {
     const body = this.form.getRawValue();
     this.addDataToFirestore(body);
-    // this.openDialog();
+    this.openDialog();
   }
 
   private addDataToFirestore(data: any) {

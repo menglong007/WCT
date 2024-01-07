@@ -42,7 +42,7 @@ export class CheckComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.loadData();
+    // this.loadData();
     if (this.data != null) {
       this.form.patchValue({
         mail: this.data.mail,
@@ -54,24 +54,24 @@ export class CheckComponent implements OnInit{
     }
   }
 
-  private loadData() {
-    this.afr.collection<any>('check').valueChanges().subscribe({
-      next: (res) => {
-        res.forEach((re) => {
-          const value = re.value; // Assuming 'value' is a field in the 'check' documents
-          this.afr.doc(`product/${re.value}`).collection('check', ref =>
-            ref.where('id', '==', value)).valueChanges().subscribe({
-            next: (p: any[]) => {
-              p.forEach(item => {
-                this.Images.push({ image: item.image, model: item.model });
-                console.log(value)
-              });
-            }
-          });
-        });
-      }
-    });
-  }
+  // private loadData() {
+  //   this.afr.collection<any>('check').valueChanges().subscribe({
+  //     next: (res) => {
+  //       res.forEach((re) => {
+  //         const value = re.value; // Assuming 'value' is a field in the 'check' documents
+  //         this.afr.doc(`product/${re.value}`).collection('check', ref =>
+  //           ref.where('id', '==', value)).valueChanges().subscribe({
+  //           next: (p: any[]) => {
+  //             p.forEach(item => {
+  //               this.Images.push({ image: item.image, model: item.model });
+  //               console.log(value)
+  //             });
+  //           }
+  //         });
+  //       });
+  //     }
+  //   });
+  // }
 
 
 
